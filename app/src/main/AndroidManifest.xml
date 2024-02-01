@@ -13,6 +13,9 @@
         android:theme="@style/Theme.ECFAPP"
         tools:targetApi="31">
         <activity
+            android:name=".ListPatientActivity"
+            android:exported="false" />
+        <activity
             android:name=".IdentificationActivity"
             android:exported="true">
             <intent-filter>
