@@ -4,4 +4,6 @@
     <string name="marticule">Marticule</string>
     <string name="soignemoi">SoigneMoi</string>
     <string name="logout">logout</string>
+    <string name="avis">Avis</string>
+    <string name="prescription">Prescription</string>
 </resources>
