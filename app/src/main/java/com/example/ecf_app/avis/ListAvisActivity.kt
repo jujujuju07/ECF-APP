@@ -1,8 +1,7 @@
 package com.example.ecf_app.avis
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.ecf_app.R
+import androidx.appcompat.app.AppCompatActivity
 import com.example.ecf_app.databinding.ActivityListAvisBinding
 
 class ListAvisActivity : AppCompatActivity() {
