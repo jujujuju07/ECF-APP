@@ -6,4 +6,5 @@
     <string name="logout">logout</string>
     <string name="avis">Avis</string>
     <string name="prescription">Prescription</string>
+    <string name="titre_de_l_avis">Titre de l’avis</string>
 </resources>
