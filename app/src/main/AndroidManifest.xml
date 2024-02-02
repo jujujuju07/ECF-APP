@@ -13,6 +13,9 @@
         android:theme="@style/Theme.ECFAPP"
         tools:targetApi="31">
         <activity
+            android:name=".avis.ConsultationAvisActivity"
+            android:exported="false" />
+        <activity
             android:name=".avis.AjouterAvisActivity"
             android:exported="false" />
         <activity
