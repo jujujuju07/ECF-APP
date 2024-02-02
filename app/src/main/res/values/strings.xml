@@ -12,4 +12,8 @@
     <string name="nom_prénom_du_médecin">Nom Prénom du Médecin</string>
     <string name="ajouter">Ajouter</string>
     <string name="titre_de_prescription">Titre de prescription</string>
+    <string name="liste_de_médicament">Liste de médicament</string>
+    <string name="posologie">Posologie</string>
+    <string name="date_de_début">Date de Début</string>
+    <string name="date_de_fin">Date de Fin</string>
 </resources>
