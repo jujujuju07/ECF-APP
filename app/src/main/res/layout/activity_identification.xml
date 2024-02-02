@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/IdentificationActivityConstraintLayoutAll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IdentificationActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/IdentificationActivityConstraintLayoutHeader"
+        android:layout_width="0dp"
+        android:layout_height="104dp"
+        android:background="#3936DF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/IdentificationActivityTextViewHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/soignemoi"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/IdentificationActivityTextViewMatricule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/marticule"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/IdentificationActivityTextInputLayout"
+        app:layout_constraintEnd_toEndOf="@+id/IdentificationActivityTextInputLayout"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/IdentificationActivityTextInputLayout" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/IdentificationActivityTextInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="323dp"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/black"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@color/black"
+        app:counterTextColor="@color/black"
+        app:helperTextTextColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:passwordToggleTint="@color/black"
+        app:placeholderTextColor="@color/black"
+        app:prefixTextColor="@color/black"
+        app:suffixTextColor="@color/black">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/IdentificationActivityTextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/marticule"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/IdentificationActivityButtonSeConnecter"
+        android:layout_width="277dp"
+        android:layout_height="70dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/se_connecter"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:cornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IdentificationActivityTextInputLayout"
+        app:strokeColor="@color/black"
+        app:strokeWidth="4dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

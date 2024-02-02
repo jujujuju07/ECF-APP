@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".prescription.ModifierPrescriptionActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ModifierPrescriptionActivityConstraintLayoutHeader"
+        android:layout_width="0dp"
+        android:layout_height="104dp"
+        android:background="#3936DF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/ModifierPrescriptionActivityTextViewHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/soignemoi"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.25"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ModifierPrescriptionActivityImageViewHeader"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@string/logout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ModifierPrescriptionActivityTextViewHeader"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logout" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/ModifierPrescriptionActivityLinearLatout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ModifierPrescriptionActivityConstraintLayoutListeMedicament"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/ModifierPrescriptionActivityTextViewListeMedicament"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/liste_de_médicament"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ModifierPrescriptionActivityTextInputLayoutListeMedicament"
+                android:layout_width="323dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:textColorHint="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ModifierPrescriptionActivityTextViewListeMedicament">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ModifierPrescriptionActivityTextInputEditTextListeMedicament"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/liste_de_médicament"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ModifierPrescriptionActivityConstraintLayoutPosologie"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/ModifierPrescriptionActivityTextViewPosologie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/posologie"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ModifierPrescriptionActivityTextInputLayoutPosologie"
+                android:layout_width="323dp"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/black"
+                app:layout_constraintStart_toStartOf="@id/ModifierPrescriptionActivityTextViewPosologie"
+                app:layout_constraintTop_toBottomOf="@+id/ModifierPrescriptionActivityTextViewPosologie">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ModifierPrescriptionActivityTextInputEditTextPosologie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/posologie"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ModifierPrescriptionActivityConstraintLayoutDateDebut"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/ModifierPrescriptionActivityTextViewDateDebut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/date_de_début"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ModifierPrescriptionActivityTextInputLayoutDateDebut"
+                android:layout_width="323dp"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ModifierPrescriptionActivityTextViewDateDebut">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ModifierPrescriptionActivityTextInputEditTextDateDebut"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/date_de_début"
+                    android:inputType="datetime" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ModifierPrescriptionActivityConstraintLayoutDateFin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/ModifierPrescriptionActivityTextViewDateFin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/date_de_fin"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ModifierPrescriptionActivityTextInputLayoutDateFin"
+                android:layout_width="323dp"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ModifierPrescriptionActivityTextViewDateFin">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ModifierPrescriptionActivityTextInputEditTextDateFin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/date_de_fin"
+                    android:inputType="datetime" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/ModifierPrescriptionActivityButton"
+        android:layout_width="277dp"
+        android:layout_height="70dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/confirmer"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:cornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ModifierPrescriptionActivityLinearLatout"
+        app:strokeColor="@color/black"
+        app:strokeWidth="4dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
