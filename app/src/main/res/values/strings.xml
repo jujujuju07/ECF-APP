@@ -16,4 +16,5 @@
     <string name="posologie">Posologie</string>
     <string name="date_de_début">Date de Début</string>
     <string name="date_de_fin">Date de Fin</string>
+    <string name="confirmer">Confirmer</string>
 </resources>
