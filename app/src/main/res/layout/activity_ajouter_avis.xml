@@ -80,7 +80,8 @@
                     android:id="@+id/AjouterAvisActivityTextInputEditTextTitreAvis"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/titre_de_l_avis" />
+                    android:hint="@string/titre_de_l_avis"
+                    android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -112,7 +113,8 @@
                     android:id="@+id/AjouterAvisActivityTextInputEditTextDate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/date" />
+                    android:hint="@string/date"
+                    android:inputType="datetime" />
             </com.google.android.material.textfield.TextInputLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -143,7 +145,8 @@
                     android:id="@+id/AjouterAvisActivityTextInputEditTextDescription"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/description" />
+                    android:hint="@string/description"
+                    android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -174,7 +177,8 @@
                     android:id="@+id/AjouterAvisActivityTextInputEditTextNomPrenomMedecin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/nom_prénom_du_médecin" />
+                    android:hint="@string/nom_prénom_du_médecin"
+                    android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>

@@ -79,7 +79,8 @@
                     android:id="@+id/ModifierPrescriptionActivityTextInputEditTextListeMedicament"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/liste_de_médicament" />
+                    android:hint="@string/liste_de_médicament"
+                    android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -111,7 +112,8 @@
                     android:id="@+id/ModifierPrescriptionActivityTextInputEditTextPosologie"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/posologie" />
+                    android:hint="@string/posologie"
+                    android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -142,7 +144,8 @@
                     android:id="@+id/ModifierPrescriptionActivityTextInputEditTextDateDebut"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/date_de_début" />
+                    android:hint="@string/date_de_début"
+                    android:inputType="datetime" />
             </com.google.android.material.textfield.TextInputLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -173,7 +176,8 @@
                     android:id="@+id/ModifierPrescriptionActivityTextInputEditTextDateFin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/date_de_fin" />
+                    android:hint="@string/date_de_fin"
+                    android:inputType="datetime" />
             </com.google.android.material.textfield.TextInputLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
