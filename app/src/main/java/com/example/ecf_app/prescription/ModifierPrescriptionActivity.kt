@@ -68,6 +68,16 @@ class ModifierPrescriptionActivity : AppCompatActivity() {
             datetime(it)
         }
 
+        binding.ModifierPrescriptionActivityImageViewHeader.setOnClickListener {
+            val intent = baseContext.packageManager.getLaunchIntentForPackage(
+                baseContext.packageName
+            )
+            intent!!.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+            startActivity(intent)
+        }
+
+
 
     }
 

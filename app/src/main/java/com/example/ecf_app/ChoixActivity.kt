@@ -1,5 +1,6 @@
 package com.example.ecf_app
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -30,8 +31,17 @@ class ChoixActivity : AppCompatActivity() {
             val intent = Intent(it.context, ListPrescriptionActivity::class.java)
             lancerActivity(it,intent)
         }
-    }
 
+        binding.ChoixActivityImageViewHeader.setOnClickListener {
+            val intent = baseContext.packageManager.getLaunchIntentForPackage(
+                baseContext.packageName
+            )
+            intent!!.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+            startActivity(intent)
+        }
+
+    }
     fun lancerActivity(it: View, intent: Intent){
         intent.putExtra("objetPatient",patient)
         intent.putExtra("objetMedecin",medecin)

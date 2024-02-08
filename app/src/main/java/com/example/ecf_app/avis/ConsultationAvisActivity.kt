@@ -1,5 +1,6 @@
 package com.example.ecf_app.avis
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.ecf_app.databinding.ActivityConsultationAvisBinding
@@ -31,6 +32,16 @@ class ConsultationAvisActivity : AppCompatActivity() {
             info()
             binding.medecin = medecin
         }
+
+        binding.ConsultationAvisActivityImageViewHeader.setOnClickListener {
+            val intent = baseContext.packageManager.getLaunchIntentForPackage(
+                baseContext.packageName
+            )
+            intent!!.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+            startActivity(intent)
+        }
+
     }
 
     suspend fun info(){

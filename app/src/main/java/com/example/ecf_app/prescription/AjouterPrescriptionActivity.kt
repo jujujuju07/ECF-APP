@@ -59,6 +59,16 @@ class AjouterPrescriptionActivity : AppCompatActivity() {
             datetime(it)
         }
 
+        binding.AjouterPrescriptionActivityImageViewHeader.setOnClickListener {
+            val intent = baseContext.packageManager.getLaunchIntentForPackage(
+                baseContext.packageName
+            )
+            intent!!.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+            startActivity(intent)
+        }
+
+
     }
 
     private fun datetime(it: View){

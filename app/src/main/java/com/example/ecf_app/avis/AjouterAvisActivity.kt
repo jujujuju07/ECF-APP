@@ -47,6 +47,16 @@ class AjouterAvisActivity : AppCompatActivity() {
             datetime(it)
         }
 
+        binding.AjouterAvisActivityImageViewHeader.setOnClickListener {
+            val intent = baseContext.packageManager.getLaunchIntentForPackage(
+                baseContext.packageName
+            )
+            intent!!.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+            startActivity(intent)
+        }
+
+
 
     }
     private fun datetime(it: View){

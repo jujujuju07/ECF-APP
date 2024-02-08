@@ -32,6 +32,15 @@ class ListPrescriptionActivity : AppCompatActivity() {
             intent.putExtra("objetMedecin",medecin)
             it.context.startActivity(intent)
         }
+        binding.ListPrescriptionActivityImageViewHeader.setOnClickListener {
+            val intent = baseContext.packageManager.getLaunchIntentForPackage(
+                baseContext.packageName
+            )
+            intent!!.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+            startActivity(intent)
+        }
+
     }
 
     override fun onResume() {

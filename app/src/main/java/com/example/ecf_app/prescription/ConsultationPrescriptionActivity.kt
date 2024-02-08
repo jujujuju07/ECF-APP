@@ -43,6 +43,16 @@ class ConsultationPrescriptionActivity : AppCompatActivity() {
             it.context.startActivity(intent)
 
         }
+
+        binding.ConsultationPrescriptionActivityImageViewHeader.setOnClickListener {
+            val intent = baseContext.packageManager.getLaunchIntentForPackage(
+                baseContext.packageName
+            )
+            intent!!.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+            startActivity(intent)
+        }
+
     }
 
     suspend fun info(){
