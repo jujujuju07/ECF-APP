@@ -69,9 +69,9 @@ class AjouterPrescriptionActivity : AppCompatActivity() {
         if (TextInputEditText.text?.isEmpty() == false){
             intent.putExtra("valeur",true)
 
-            var sapce = TextInputEditText.text?.split(" ")
-            var date = sapce?.get(0)?.split("-")
-            var time = sapce?.get(1)?.split(":")
+            val sapce = TextInputEditText.text?.split(" ")
+            val date = sapce?.get(0)?.split("-")
+            val time = sapce?.get(1)?.split(":")
 
             intent.putExtra("year", date?.get(0))
             intent.putExtra("month", date?.get(1))
@@ -84,6 +84,7 @@ class AjouterPrescriptionActivity : AppCompatActivity() {
         startActivityForResult(intent, REQUEST_DATE_TIME_PICKER)
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == REQUEST_DATE_TIME_PICKER && resultCode == RESULT_OK) {
