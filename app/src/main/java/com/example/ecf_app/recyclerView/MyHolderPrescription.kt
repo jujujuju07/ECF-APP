@@ -1,7 +1,6 @@
 package com.example.ecf_app.recyclerView
 
 import android.content.Intent
-import android.util.Log
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ecf_app.databinding.ItemListPrescriptionBinding
 import com.example.ecf_app.json.ListPatientItem

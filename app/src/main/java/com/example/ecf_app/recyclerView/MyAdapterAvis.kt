@@ -4,9 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ecf_app.databinding.ItemListAvisBinding
-import com.example.ecf_app.databinding.ItemListPatientBinding
 import com.example.ecf_app.json.ListAvis
-import com.example.ecf_app.json.ListPatient
 import com.example.ecf_app.json.ListPatientItem
 import com.example.ecf_app.json.Medecin
 
