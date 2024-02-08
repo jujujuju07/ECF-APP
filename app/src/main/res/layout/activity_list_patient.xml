@@ -42,13 +42,43 @@
             app:srcCompat="@drawable/logout" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ListPatientActivityConstraintLayoutTitre"
+        android:layout_width="0dp"
+        android:layout_height="67dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ListPatientActivityConstraintLayoutHeader">
+
+        <View
+            android:id="@+id/ListPatientActivityViewTitre"
+            android:layout_width="wrap_content"
+            android:layout_height="4dp"
+            android:background="#000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/ListPatientActivityTextViewTitre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titre_de_l_avis"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/ListPatientActivityRecylerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ListPatientActivityConstraintLayoutHeader" />
+        app:layout_constraintTop_toBottomOf="@+id/ListPatientActivityConstraintLayoutTitre" />
 </androidx.constraintlayout.widget.ConstraintLayout>
