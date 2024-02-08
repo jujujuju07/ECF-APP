@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.ecf_app.databinding.ActivityIdentificationBinding
+import com.example.ecf_app.json.Medecin
 import com.example.ecf_app.retrofit.ApiAdapteur
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
@@ -15,6 +16,7 @@ import kotlinx.coroutines.launch
 class IdentificationActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityIdentificationBinding
+    private lateinit var medecin: Medecin
     @OptIn(DelicateCoroutinesApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,7 +34,7 @@ class IdentificationActivity : AppCompatActivity() {
                     }else if (reponse == 1){
                         println("matricule trouver")
                         val intent = Intent(it.context, ListPatientActivity::class.java)
-                        intent.putExtra("matricule",matricule)
+                        intent.putExtra("objetMedecin",medecin)
                         it.context.startActivity(intent)
                     }else{
                         println("probleme connexion")
@@ -60,6 +62,7 @@ class IdentificationActivity : AppCompatActivity() {
             val reponse = ApiAdapteur.apiClient.getMedecin(matricule)
             return if (reponse.isSuccessful && reponse.body() != null){
                 Log.i("reponse",reponse.body().toString())
+                medecin = reponse.body()!!
                 if (reponse.body()!!.matricule == matricule){
                     1
                 }else{

@@ -113,6 +113,7 @@
                     android:id="@+id/AjouterAvisActivityTextInputEditTextDate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:focusable="false"
                     android:hint="@string/date"
                     android:inputType="datetime" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -182,6 +183,15 @@
             </com.google.android.material.textfield.TextInputLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/AjouterAvisActivityTextViewErreur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/AjouterAvisActivityButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AjouterAvisActivityLinearLatout" />
 
     <Button
         android:id="@+id/AjouterAvisActivityButton"

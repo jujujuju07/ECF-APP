@@ -145,8 +145,9 @@
                     android:id="@+id/AjouterPrescriptionActivityTextInputEditTextDateDebut"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:focusable="false"
                     android:hint="@string/date_de_début"
-                    android:inputType="datetime" />
+                    android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -177,11 +178,21 @@
                     android:id="@+id/AjouterPrescriptionActivityTextInputEditTextDateFin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:focusable="false"
                     android:hint="@string/date_de_fin"
                     android:inputType="datetime" />
             </com.google.android.material.textfield.TextInputLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/AjouterPrescriptionActivityTextViewErreur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/AjouterPrescriptionActivityButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AjouterPrescriptionActivityLinearLatout" />
 
     <Button
         android:id="@+id/AjouterPrescriptionActivityButton"
@@ -198,4 +209,5 @@
         app:layout_constraintTop_toBottomOf="@+id/AjouterPrescriptionActivityLinearLatout"
         app:strokeColor="@color/black"
         app:strokeWidth="4dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

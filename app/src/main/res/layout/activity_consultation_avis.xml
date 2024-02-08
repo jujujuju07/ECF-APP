@@ -1,186 +1,206 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/ConsultationAvisActivityConstraintLayout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".avis.ConsultationAvisActivity">
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="avis"
+            type="com.example.ecf_app.json.Avis" />
+        <variable
+            name="medecin"
+            type="com.example.ecf_app.json.Medecin" />
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/ConsultationAvisActivityConstraintLayoutHeader"
-        android:layout_width="0dp"
-        android:layout_height="104dp"
-        android:background="#3936DF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:id="@+id/ConsultationAvisActivityConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".avis.ConsultationAvisActivity">
 
-        <TextView
-            android:id="@+id/ConsultationAvisActivityTextViewHeader"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ConsultationAvisActivityConstraintLayoutHeader"
+            android:layout_width="0dp"
+            android:layout_height="104dp"
+            android:background="#3936DF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/ConsultationAvisActivityTextViewHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/soignemoi"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="40sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.25"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ConsultationAvisActivityImageViewHeader"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="@string/logout"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ConsultationAvisActivityTextViewHeader"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/logout" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/ConsultationAvisActivityLinearLatout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/soignemoi"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="40sp"
+            android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.25"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/ConsultationAvisActivityImageViewHeader"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:contentDescription="@string/logout"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/ConsultationAvisActivityTextViewHeader"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/logout" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ConsultationAvisActivityConstraintLayoutTitreAvis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/ConsultationAvisActivityTextViewTitreAvis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/titre_de_l_avis"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ConsultationAvisActivityTextInputLayoutTitreAvis"
+                    android:layout_width="323dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:textColorHint="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ConsultationAvisActivityTextViewTitreAvis">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ConsultationAvisActivityTextInputEditTextTitreAvis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:hint="@string/titre_de_l_avis"
+                        android:inputType="text"
+                        android:text="@{avis.titre}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ConsultationAvisActivityConstraintLayoutDate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/ConsultationAvisActivityTextViewDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/date"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ConsultationAvisActivityTextInputLayoutDate"
+                    android:layout_width="323dp"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/black"
+                    app:layout_constraintStart_toStartOf="@id/ConsultationAvisActivityTextViewDate"
+                    app:layout_constraintTop_toBottomOf="@+id/ConsultationAvisActivityTextViewDate">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ConsultationAvisActivityTextInputEditTextDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:hint="@string/date"
+                        android:inputType="datetime"
+                        android:text="@{avis.date}"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ConsultationAvisActivityConstraintLayoutDescription"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/ConsultationAvisActivityTextViewDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/description"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ConsultationAvisActivityTextInputLayoutDescription"
+                    android:layout_width="323dp"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ConsultationAvisActivityTextViewDescription">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ConsultationAvisActivityTextInputEditTextDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:hint="@string/description"
+                        android:inputType="text"
+                        android:text="@{avis.description}"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ConsultationAvisActivityConstraintLayoutNomPrenomMedecin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/ConsultationAvisActivityTextViewNomPrenomMedecin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nom_prénom_du_médecin"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ConsultationAvisActivityTextInputLayoutNomPrenomMedecin"
+                    android:layout_width="323dp"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ConsultationAvisActivityTextViewNomPrenomMedecin">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ConsultationAvisActivityTextInputEditTextNomPrenomMedecin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:hint="@string/nom_prénom_du_médecin"
+                        android:inputType="text"
+                        android:text="@{medecin.nom + ' ' + medecin.prenom}"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <LinearLayout
-        android:id="@+id/ConsultationAvisActivityLinearLatout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/ConsultationAvisActivityConstraintLayoutTitreAvis"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/ConsultationAvisActivityTextViewTitreAvis"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/titre_de_l_avis"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/ConsultationAvisActivityTextInputLayoutTitreAvis"
-                android:layout_width="323dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:textColorHint="@color/black"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ConsultationAvisActivityTextViewTitreAvis">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/ConsultationAvisActivityTextInputEditTextTitreAvis"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/titre_de_l_avis"
-                    android:inputType="text" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/ConsultationAvisActivityConstraintLayoutDate"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/ConsultationAvisActivityTextViewDate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/date"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/ConsultationAvisActivityTextInputLayoutDate"
-                android:layout_width="323dp"
-                android:layout_height="wrap_content"
-                android:textColorHint="@color/black"
-                app:layout_constraintStart_toStartOf="@id/ConsultationAvisActivityTextViewDate"
-                app:layout_constraintTop_toBottomOf="@+id/ConsultationAvisActivityTextViewDate">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/ConsultationAvisActivityTextInputEditTextDate"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/date"
-                    android:inputType="datetime" />
-            </com.google.android.material.textfield.TextInputLayout>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/ConsultationAvisActivityConstraintLayoutDescription"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/ConsultationAvisActivityTextViewDescription"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/description"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/ConsultationAvisActivityTextInputLayoutDescription"
-                android:layout_width="323dp"
-                android:layout_height="wrap_content"
-                android:textColorHint="@color/black"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ConsultationAvisActivityTextViewDescription">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/ConsultationAvisActivityTextInputEditTextDescription"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/description"
-                    android:inputType="text" />
-            </com.google.android.material.textfield.TextInputLayout>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/ConsultationAvisActivityConstraintLayoutNomPrenomMedecin"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/ConsultationAvisActivityTextViewNomPrenomMedecin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/nom_prénom_du_médecin"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/ConsultationAvisActivityTextInputLayoutNomPrenomMedecin"
-                android:layout_width="323dp"
-                android:layout_height="wrap_content"
-                android:textColorHint="@color/black"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ConsultationAvisActivityTextViewNomPrenomMedecin">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/ConsultationAvisActivityTextInputEditTextNomPrenomMedecin"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/nom_prénom_du_médecin"
-                    android:inputType="text" />
-            </com.google.android.material.textfield.TextInputLayout>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </LinearLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
