@@ -10,6 +10,7 @@ import com.example.ecf_app.json.ListPatientItem
 import com.example.ecf_app.json.Medecin
 import com.example.ecf_app.retrofit.ApiAdapteur
 import com.google.android.material.textfield.TextInputEditText
+import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -23,6 +24,7 @@ class AjouterAvisActivity : AppCompatActivity() {
     private lateinit var TextInputEditText: TextInputEditText
     private val REQUEST_DATE_TIME_PICKER = 1
 
+    @OptIn(DelicateCoroutinesApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAjouterAvisBinding.inflate(layoutInflater)
@@ -55,9 +57,9 @@ class AjouterAvisActivity : AppCompatActivity() {
         if (TextInputEditText.text?.isEmpty() == false){
             intent.putExtra("valeur",true)
 
-            var sapce = TextInputEditText.text?.split(" ")
-            var date = sapce?.get(0)?.split("-")
-            var time = sapce?.get(1)?.split(":")
+            val sapce = TextInputEditText.text?.split(" ")
+            val date = sapce?.get(0)?.split("-")
+            val time = sapce?.get(1)?.split(":")
 
             intent.putExtra("year", date?.get(0))
             intent.putExtra("month", date?.get(1))
@@ -70,6 +72,7 @@ class AjouterAvisActivity : AppCompatActivity() {
         startActivityForResult(intent, REQUEST_DATE_TIME_PICKER)
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == REQUEST_DATE_TIME_PICKER && resultCode == RESULT_OK) {
