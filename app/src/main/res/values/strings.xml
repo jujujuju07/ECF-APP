@@ -19,4 +19,5 @@
     <string name="confirmer">Confirmer</string>
     <string name="modifier">Modifier</string>
     <string name="suivant">suivant</string>
+    <string name="nom_prenom">Nom Prenom</string>
 </resources>
